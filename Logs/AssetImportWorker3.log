@@ -2834,3 +2834,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:scripting/monoscript/fileName/Shoot.cs: 53d7b1fc67c732f428feb60d2cea9e7d -> 6f7bde76e6bcb06e92f7792c41237c79
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:scripting/monoscript/fileName/Boss_Phase.cs: b964ebda56d9fc1dec5664ce1e0a3413 -> 85e38e5cae4a6d4811b7fe670cd5b45d
+========================================================================
+Received Import Request.
+  Time since last request: 2551.201888 seconds.
+  path: Assets/recursos/UI/Monedas/MonedaPalta.png
+  artifactKey: Guid(fab5a2cd6b76f594d9f243898428fe3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/UI/Monedas/MonedaPalta.png using Guid(fab5a2cd6b76f594d9f243898428fe3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88920ed8e6e7ef7e257893e82e78fbfc') in 0.078058 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/recursos/UI/Monedas/MonedaPan.png
+  artifactKey: Guid(506bb174bd77e3844b42ba5b616bf012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/UI/Monedas/MonedaPan.png using Guid(506bb174bd77e3844b42ba5b616bf012) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5907252b29c0b1fbdabe7e835ac05198') in 0.011966 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
