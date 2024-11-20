@@ -12,9 +12,13 @@ public class Boss_Phase : MonoBehaviour
     public float fireRate = 1f;
     public float bulletLife = 2f;
 
+    public HealthBar healthBar;
+
 
     private bool isDead = false;
-    private float[] nextFireTime;  // Array para almacenar el tiempo del siguiente disparo para cada firePoint
+    private float[] nextFireTime; 
+
+
     
     private Animator animator;
 
@@ -28,6 +32,9 @@ public class Boss_Phase : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
+
         animator = GetComponent<Animator>();
 
         // Inicializar el estado de salud
@@ -72,6 +79,9 @@ public class Boss_Phase : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+
         Debug.Log("Current Health: " + currentHealth);
 
         if (currentHealth > 0.5f * maxHealth)
