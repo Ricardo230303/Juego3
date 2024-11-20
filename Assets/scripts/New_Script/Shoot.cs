@@ -10,29 +10,17 @@ public class Shooting : MonoBehaviour
     [SerializeField] SpriteRenderer sr; // Referencia al SpriteRenderer del jugador
 
 
-    [SerializeField] float aimingOffsetZ = 1f;
+    // [SerializeField] float aimingOffsetZ = 1f;
 
 
     void Update()
     {
         // Disparo cuando se presiona el botón de disparo y ha pasado el tiempo de espera
-        if (Input.GetKey("j") && Time.time > nextFireTime)
+        if (Input.GetKey(KeyCode.LeftControl) && Time.time > nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
         }
-
-        // Cambiar la posición del firePoint al mantener presionada la tecla "K"
-        if (Input.GetKey("k"))
-        {
-            UpdateFirePointPosition(true); // Mover el firePoint a la nueva posición de apuntado
-        }
-        else
-        {
-            UpdateFirePointPosition(false); // Volver a la posición original del firePoint
-        }
-
-        // Rotar el firePoint en función de la dirección del jugador
         UpdateFirePointRotation();
     }
 
@@ -71,18 +59,18 @@ public class Shooting : MonoBehaviour
                 firePoint.rotation = Quaternion.Euler(0, 90, 0); // Mantener la rotación original
             }
         }
-    }
 
-    void UpdateFirePointPosition(bool isAiming)
-    {
-        // Desplazar el firePoint en el eje Z cuando el jugador está apuntando
-        if (isAiming)
+        if (Input.GetKey("l"))
         {
-            firePoint.localPosition = new Vector3(firePoint.localPosition.x, firePoint.localPosition.y, aimingOffsetZ);
+            firePoint.rotation = Quaternion.Euler(-45, 90, 0);  // Rotar 45 grados sobre el eje X
         }
-        else
+        else if  (Input.GetKey("i"))
         {
-            firePoint.localPosition = new Vector3(firePoint.localPosition.x, firePoint.localPosition.y, 0); // Volver a la posición original
+            firePoint.rotation = Quaternion.Euler(-90, 90, 0);  // Rotar 90 grados sobre el eje X
+        }
+        else if (Input.GetKey("j"))
+        {
+            firePoint.rotation = Quaternion.Euler(-135, 90, 0);
         }
     }
 }
