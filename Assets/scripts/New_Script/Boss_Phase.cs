@@ -7,13 +7,15 @@ public class Boss_Phase : MonoBehaviour
     public float maxHealth = 100f;
     private float currentHealth;
     public GameObject bulletPrefab;
-    public Transform bulletSpawnPoint;
+    public Transform[] bulletSpawnPoints;  // Array de puntos de disparo
     public float bulletSpeed = 10f;
     public float fireRate = 1f;
+    public float bulletLife = 2f;
 
-    private Transform player;
+
     private bool isDead = false;
-    private float nextFireTime = 0f;
+    private float[] nextFireTime;  // Array para almacenar el tiempo del siguiente disparo para cada firePoint
+    
     private Animator animator;
 
     private enum BossHealthState
@@ -26,38 +28,43 @@ public class Boss_Phase : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
 
+        // Inicializar el estado de salud
         currentHealthState = BossHealthState.HighHealth;
-    }
 
+        // Inicializar el array de tiempos de disparo para cada firePoint
+        nextFireTime = new float[bulletSpawnPoints.Length];
+        for (int i = 0; i < nextFireTime.Length; i++)
+        {
+            nextFireTime[i] = Time.time + (i * 0.2f);
+        }
+    }
     private void Update()
     {
         if (isDead) return;
 
-        FollowPlayer();
         FireAtPlayer();
-    }
-
-    private void FollowPlayer()
-    {
-        Vector3 direction = player.position - bulletSpawnPoint.position;
-        Quaternion targetRotation = Quaternion.LookRotation(direction);
-        bulletSpawnPoint.rotation = Quaternion.Slerp(bulletSpawnPoint.rotation, targetRotation, Time.deltaTime * 5f); // Rotación suave
     }
 
     private void FireAtPlayer()
     {
-        if (Time.time >= nextFireTime)
+        for (int i = 0; i < bulletSpawnPoints.Length; i++)
         {
-            nextFireTime = Time.time + 1f / fireRate;
-
-            GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            Rigidbody rb = bullet.GetComponent<Rigidbody>();
-            if (rb != null)
+            // Solo disparar si ha pasado el tiempo necesario para ese firePoint
+            if (Time.time >= nextFireTime[i])
             {
-                rb.velocity = bulletSpawnPoint.forward * bulletSpeed;
+                nextFireTime[i] = Time.time + 1f / fireRate;  // Asignar el próximo tiempo de disparo para este firePoint
+
+                // Disparar desde el punto de disparo
+                GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoints[i].position, bulletSpawnPoints[i].rotation);
+                Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                if (rb != null)
+                {
+                    rb.velocity = bulletSpawnPoints[i].forward * bulletSpeed;  // Disparar la bala en la dirección del firePoint
+                }
+
+                Destroy(bullet, bulletLife);
             }
         }
     }
@@ -65,6 +72,7 @@ public class Boss_Phase : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        Debug.Log("Current Health: " + currentHealth);
 
         if (currentHealth > 0.5f * maxHealth)
         {
@@ -97,6 +105,7 @@ public class Boss_Phase : MonoBehaviour
     private void Die()
         {
             isDead = true;
+            Debug.Log("Boss is dead");
             Destroy(gameObject);
         }
     
@@ -109,5 +118,5 @@ public class Boss_Phase : MonoBehaviour
                 Destroy(collision.gameObject);
         }
     }
-    
+ 
 }

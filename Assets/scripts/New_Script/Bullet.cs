@@ -3,6 +3,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float damage = 10f; // Daño de la bala
+    public float bulletLife = 2f;  // Tiempo de vida de la bala en segundos
+
+    private void Start()
+    {
+        // Destruir la bala después de 'bulletLife' segundos
+        Destroy(gameObject, bulletLife);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
