@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Boss_Phase : MonoBehaviour
 {
@@ -17,11 +16,10 @@ public class Boss_Phase : MonoBehaviour
 
 
     private bool isDead = false;
-    private float[] nextFireTime;
-
-    public string nextSceneName;
+    private float[] nextFireTime; 
 
 
+    
     private Animator animator;
 
     private enum BossHealthState
@@ -108,27 +106,19 @@ public class Boss_Phase : MonoBehaviour
                 }
             }
 
-        }
-        if (currentHealth <= 0)
-        {
-            Die();
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
     }
     private void Die()
         {
             isDead = true;
-
-        if (animator != null)
-        {
-
-            animator.SetTrigger("Die");
+            Debug.Log("Boss is dead");
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject, 3f);
-
-    }
-
-
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("PlayerBullet"))

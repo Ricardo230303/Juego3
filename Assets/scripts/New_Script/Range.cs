@@ -11,7 +11,7 @@ public class Range : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Player"))
         {
             onPlayerEnter?.Invoke();
         }

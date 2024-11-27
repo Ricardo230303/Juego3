@@ -17,8 +17,6 @@ public class Dialogue : MonoBehaviour
     private bool playerInRange;           // Verifica si el jugador está cerca
     private bool isDialogueActive;        // Verifica si el diálogo está activo
 
-    public GameObject objectToActivate;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -74,7 +72,6 @@ public class Dialogue : MonoBehaviour
         dialogueImage.gameObject.SetActive(true);  // Muestra la imagen en el Canvas
         promptMessage.gameObject.SetActive(false); // Desactiva el mensaje "presiona espacio"
         promptImage.gameObject.SetActive(false);   // Desactiva la imagen de fondo del mensaje
-        textComponent.gameObject.SetActive(true);
         StartCoroutine(TypeLine());  // Comienza a escribir el texto de la primera línea
     }
 
@@ -120,14 +117,7 @@ public class Dialogue : MonoBehaviour
     {
         isDialogueActive = false;  // Marca el diálogo como inactivo
         dialogueImage.gameObject.SetActive(false);  // Oculta la imagen del Canvas
-        textComponent.gameObject.SetActive(false);
         Debug.Log("Diálogo terminado.");
-
-        if (objectToActivate != null)
-        {
-            objectToActivate.SetActive(true);  // Activa el GameObject que se asignó
-            Debug.Log("Objeto activado.");
-        }
     }
 
     // Detecta cuando el jugador entra en el área de interacción
@@ -150,8 +140,6 @@ public class Dialogue : MonoBehaviour
             playerInRange = false; // El jugador ha salido del rango
             promptMessage.gameObject.SetActive(false); // Oculta el mensaje de "presiona espacio"
             promptImage.gameObject.SetActive(false);   // Oculta la imagen de fondo del mensaje
-            dialogueImage.gameObject.SetActive(false);  // Oculta la imagen del Canvas
-            textComponent.gameObject.SetActive(false);
             Debug.Log("Jugador fuera de rango, ocultando mensaje.");
         }
     }
