@@ -106,10 +106,10 @@ public class Boss_Phase : MonoBehaviour
                 }
             }
 
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
+        }
+        if (currentHealth <= 0)
+        {
+            Die();
         }
     }
     private void Die()
