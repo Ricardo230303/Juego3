@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu_Inicio.unity
+    guid: 03e1cea71b3b0b143af6084b4f375035
+  - enabled: 1
+    path: Assets/Scenes/CasaMago.unity
+    guid: b1a7c595f8be74a4e8010a212acbf69f
+  - enabled: 1
+    path: Assets/Scenes/Centro.unity
+    guid: 304b148b41401444d93a7908896bf575
+  - enabled: 1
+    path: Assets/Scenes/Platform.unity
+    guid: a42ac6d3f496bdc46b014b6158b91a72
+  - enabled: 1
+    path: Assets/Scenes/Tomato.unity
+    guid: 3aef48b8de6987a4da45ef176d5f7c86
   m_configObjects: {}
