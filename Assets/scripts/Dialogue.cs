@@ -72,6 +72,7 @@ public class Dialogue : MonoBehaviour
         dialogueImage.gameObject.SetActive(true);  // Muestra la imagen en el Canvas
         promptMessage.gameObject.SetActive(false); // Desactiva el mensaje "presiona espacio"
         promptImage.gameObject.SetActive(false);   // Desactiva la imagen de fondo del mensaje
+        textComponent.gameObject.SetActive(true);
         StartCoroutine(TypeLine());  // Comienza a escribir el texto de la primera línea
     }
 
@@ -117,6 +118,7 @@ public class Dialogue : MonoBehaviour
     {
         isDialogueActive = false;  // Marca el diálogo como inactivo
         dialogueImage.gameObject.SetActive(false);  // Oculta la imagen del Canvas
+        textComponent.gameObject.SetActive(false);
         Debug.Log("Diálogo terminado.");
     }
 
@@ -140,6 +142,8 @@ public class Dialogue : MonoBehaviour
             playerInRange = false; // El jugador ha salido del rango
             promptMessage.gameObject.SetActive(false); // Oculta el mensaje de "presiona espacio"
             promptImage.gameObject.SetActive(false);   // Oculta la imagen de fondo del mensaje
+            dialogueImage.gameObject.SetActive(false);  // Oculta la imagen del Canvas
+            textComponent.gameObject.SetActive(false);
             Debug.Log("Jugador fuera de rango, ocultando mensaje.");
         }
     }

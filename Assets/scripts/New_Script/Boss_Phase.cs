@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss_Phase : MonoBehaviour
 {
@@ -16,10 +17,11 @@ public class Boss_Phase : MonoBehaviour
 
 
     private bool isDead = false;
-    private float[] nextFireTime; 
+    private float[] nextFireTime;
+
+    public string nextSceneName;
 
 
-    
     private Animator animator;
 
     private enum BossHealthState
@@ -113,12 +115,40 @@ public class Boss_Phase : MonoBehaviour
         }
     }
     private void Die()
+    {
+        isDead = true;
+
+        // Si tienes un Animator, activamos la animación de muerte
+        if (animator != null)
         {
-            isDead = true;
-            Debug.Log("Boss is dead");
-            Destroy(gameObject);
+            animator.SetTrigger("Die");
         }
-    
+
+        // Comienza una Coroutine para esperar antes de cargar la siguiente escena
+        StartCoroutine(WaitAndLoadScene(3f)); // Espera 3 segundos (ajusta el tiempo según la duración de la animación)
+    }
+
+    private IEnumerator WaitAndLoadScene(float waitTime)
+    {
+        // Espera el tiempo dado antes de continuar
+        yield return new WaitForSeconds(waitTime);
+
+        // Ahora cargamos la siguiente escena
+        LoadNextScene();
+    }
+
+    private void LoadNextScene()
+    {
+        if (!string.IsNullOrEmpty(nextSceneName) && SceneManager.GetSceneByName(nextSceneName) != null)
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+            Debug.LogWarning("No se pudo cargar la escena siguiente. Asegúrate de proporcionar un nombre de escena válido en el Inspector.");
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("PlayerBullet"))

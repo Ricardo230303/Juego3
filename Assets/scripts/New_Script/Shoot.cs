@@ -9,6 +9,8 @@ public class Shooting : MonoBehaviour
     [SerializeField] float bulletLife = 1f;
     [SerializeField] SpriteRenderer sr; // Referencia al SpriteRenderer del jugador
 
+    [SerializeField] Animator animator;
+
 
     // [SerializeField] float aimingOffsetZ = 1f;
 
@@ -26,6 +28,10 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
+        if (animator != null)
+        {
+            animator.SetTrigger("Shoot"); // Activa el trigger "Shoot" para reproducir la animación
+        }
         // Crear un nuevo proyectil en la posición y rotación del firePoint
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
@@ -40,6 +46,8 @@ public class Shooting : MonoBehaviour
 
         // Destruir el proyectil después de un tiempo
         Destroy(projectile, bulletLife);
+
+
     }
 
 
