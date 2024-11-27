@@ -17,6 +17,8 @@ public class Dialogue : MonoBehaviour
     private bool playerInRange;           // Verifica si el jugador está cerca
     private bool isDialogueActive;        // Verifica si el diálogo está activo
 
+    public GameObject objectToActivate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -120,6 +122,12 @@ public class Dialogue : MonoBehaviour
         dialogueImage.gameObject.SetActive(false);  // Oculta la imagen del Canvas
         textComponent.gameObject.SetActive(false);
         Debug.Log("Diálogo terminado.");
+
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(true);  // Activa el GameObject que se asignó
+            Debug.Log("Objeto activado.");
+        }
     }
 
     // Detecta cuando el jugador entra en el área de interacción

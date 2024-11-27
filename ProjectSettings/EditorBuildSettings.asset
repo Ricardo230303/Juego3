@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Centro.unity
     guid: 304b148b41401444d93a7908896bf575
   - enabled: 1
+    path: Assets/Scenes/Centro 2.unity
+    guid: 510f4e9de867a2a48a66329a6807a2ee
+  - enabled: 1
     path: Assets/Scenes/Platform.unity
     guid: a42ac6d3f496bdc46b014b6158b91a72
   - enabled: 1

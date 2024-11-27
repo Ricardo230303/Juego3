@@ -115,39 +115,19 @@ public class Boss_Phase : MonoBehaviour
         }
     }
     private void Die()
-    {
-        isDead = true;
+        {
+            isDead = true;
 
-        // Si tienes un Animator, activamos la animación de muerte
         if (animator != null)
         {
+
             animator.SetTrigger("Die");
         }
 
-        // Comienza una Coroutine para esperar antes de cargar la siguiente escena
-        StartCoroutine(WaitAndLoadScene(3f)); // Espera 3 segundos (ajusta el tiempo según la duración de la animación)
+        Destroy(gameObject, 3f);
+
     }
 
-    private IEnumerator WaitAndLoadScene(float waitTime)
-    {
-        // Espera el tiempo dado antes de continuar
-        yield return new WaitForSeconds(waitTime);
-
-        // Ahora cargamos la siguiente escena
-        LoadNextScene();
-    }
-
-    private void LoadNextScene()
-    {
-        if (!string.IsNullOrEmpty(nextSceneName) && SceneManager.GetSceneByName(nextSceneName) != null)
-        {
-            SceneManager.LoadScene(nextSceneName);
-        }
-        else
-        {
-            Debug.LogWarning("No se pudo cargar la escena siguiente. Asegúrate de proporcionar un nombre de escena válido en el Inspector.");
-        }
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
