@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4395,9 +4395,13 @@ PrefabInstance:
       propertyPath: changInYAxisAnimation
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5855682033551339479, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 04f43ebf8aab3c244a5169c21ef7e1aa, type: 2}
     - target: {fileID: 6371595519945861344, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_Name
-      value: Player1
+      value: Player_Pan
       objectReference: {fileID: 0}
     - target: {fileID: 6371595519945861344, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_IsActive
@@ -4407,6 +4411,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7293659645457284194, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 582f52cb824eedc44bd3b987da6ec5fc, type: 3}
     - target: {fileID: 7293659645457284194, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6137,7 +6145,6 @@ MonoBehaviour:
   - murio el tomate
   - Hola2
   textSpeed: 0.1
-  objectToActivate: {fileID: 1951690628}
 --- !u!1001 &993338446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12474,11 +12481,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5855682033551339479, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5855682033551339479, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: bd9decd3335bf264cae308fc0439fc3b, type: 2}
     - target: {fileID: 6371595519945861344, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_Name
-      value: Player_Pan
+      value: Player_Tomate
       objectReference: {fileID: 0}
     - target: {fileID: 6371595519945861344, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_IsActive
@@ -12491,7 +12502,7 @@ PrefabInstance:
     - target: {fileID: 7293659645457284194, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 582f52cb824eedc44bd3b987da6ec5fc, type: 3}
+      objectReference: {fileID: 21300000, guid: 4e47828e00baa754199cda1b4e919fbf, type: 3}
     - target: {fileID: 7293659645457284194, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

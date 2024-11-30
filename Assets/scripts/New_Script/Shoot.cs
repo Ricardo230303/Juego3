@@ -9,9 +9,16 @@ public class Shooting : MonoBehaviour
     [SerializeField] float bulletLife = 1f;
     [SerializeField] SpriteRenderer sr; // Referencia al SpriteRenderer del jugador
 
+    private Animator animator;
+
 
     // [SerializeField] float aimingOffsetZ = 1f;
 
+    void Start()
+    {
+        // Obtenemos la referencia al Animator
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -20,6 +27,17 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            animator.SetTrigger("Shoot_Up");
+        }
+
+        // Verifica si se presiona la tecla para disparar
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            animator.SetTrigger("Shoot");
         }
         UpdateFirePointRotation();
     }
