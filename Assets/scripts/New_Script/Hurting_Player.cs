@@ -22,8 +22,8 @@ public class Hurting_Player : MonoBehaviour
     }
     IEnumerator GetHurt()
     {
-        Physics.IgnoreLayerCollision(6, 8);
+        Physics.IgnoreLayerCollision(7, 8);
         yield return new WaitForSeconds(2);
-        Physics.IgnoreLayerCollision(6, 8, false);
+        Physics.IgnoreLayerCollision(7, 8, false);
     }
 }
