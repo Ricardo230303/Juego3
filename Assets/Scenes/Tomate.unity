@@ -6419,7 +6419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502603b434895a64684d8f3a638db7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Centro 3
+  nextSceneName: Centro_Tomate
 --- !u!1 &874934531
 GameObject:
   m_ObjectHideFlags: 0
