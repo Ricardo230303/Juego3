@@ -12,6 +12,9 @@ public class Dialogue : MonoBehaviour
     public Image dialogueImage;           // Componente de imagen en el Canvas
     public string[] lines;                // Las líneas de diálogo
     public float textSpeed;               // Velocidad de escritura del texto
+    public GameObject objectToActivate;
+
+    public PlayerMovement playerMovement;
 
     private int index;                    // Índice de la línea actual del diálogo
     private bool playerInRange;           // Verifica si el jugador está cerca
@@ -25,6 +28,7 @@ public class Dialogue : MonoBehaviour
         dialogueImage.gameObject.SetActive(false); // Desactiva la imagen al principio
         promptMessage.gameObject.SetActive(false); // Desactiva el mensaje "presiona espacio"
         promptImage.gameObject.SetActive(false);   // Desactiva la imagen de fondo del mensaje
+        textComponent.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,21 +39,22 @@ public class Dialogue : MonoBehaviour
         {
             StartDialogue();
         }
-
-        // Si el diálogo está activo, procesar la entrada para avanzar con el texto
-        if (isDialogueActive)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
+        else { 
+            // Si el diálogo está activo, procesar la entrada para avanzar con el texto
+            if (isDialogueActive)
             {
-                if (textComponent.text == lines[index])  // Si el texto ya está completo
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    NextLine();  // Avanzar a la siguiente línea
-                }
-                else
-                {
-                    StopAllCoroutines();  // Detener la escritura en curso
-                    textComponent.text = lines[index];  // Mostrar el texto completo
-                    Debug.Log("Texto completo, siguiente línea");
+                    if (textComponent.text == lines[index])  // Si el texto ya está completo
+                    {
+                        NextLine();  // Avanzar a la siguiente línea
+                    }
+                    else
+                    {
+                        StopAllCoroutines();  // Detener la escritura en curso
+                        textComponent.text = lines[index];  // Mostrar el texto completo
+                        Debug.Log("Texto completo, siguiente línea");
+                    }
                 }
             }
         }
@@ -72,7 +77,14 @@ public class Dialogue : MonoBehaviour
         dialogueImage.gameObject.SetActive(true);  // Muestra la imagen en el Canvas
         promptMessage.gameObject.SetActive(false); // Desactiva el mensaje "presiona espacio"
         promptImage.gameObject.SetActive(false);   // Desactiva la imagen de fondo del mensaje
+        textComponent.gameObject.SetActive(true);
         StartCoroutine(TypeLine());  // Comienza a escribir el texto de la primera línea
+
+        // Desactiva el movimiento del jugador durante el diálogo
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false;
+        }
     }
 
     // Corutina para escribir el texto línea por línea
@@ -117,7 +129,20 @@ public class Dialogue : MonoBehaviour
     {
         isDialogueActive = false;  // Marca el diálogo como inactivo
         dialogueImage.gameObject.SetActive(false);  // Oculta la imagen del Canvas
+        textComponent.gameObject.SetActive(false);
         Debug.Log("Diálogo terminado.");
+
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = true;
+        }
+
+        // Activa el GameObject al finalizar el diálogo
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(true);  // Activa el GameObject
+            Debug.Log("GameObject activado: " + objectToActivate.name);
+        }
     }
 
     // Detecta cuando el jugador entra en el área de interacción

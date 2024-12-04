@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0007200976, g: 0.0008675759, b: 0.419518, a: 1}
+  m_IndirectSpecularColor: {r: 0.00066579843, g: 0.00086654566, b: 0.4194915, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -981,11 +981,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 405763633110129118, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 405763633110129118, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 405763633110129118, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1114,6 +1114,7 @@ MonoBehaviour:
   fireRate: 0.5
   bulletLife: 1
   sr: {fileID: 57653265}
+  shootSound: {fileID: 0}
 --- !u!114 &57653268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,6 +1271,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &75849763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1689,7 +1691,7 @@ Transform:
   m_GameObject: {fileID: 127132419}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.12, y: 53.23, z: 3.1}
+  m_LocalPosition: {x: -5.89, y: 53.23, z: 3.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2511,6 +2513,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &169122806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2573,6 +2576,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!4 &181670861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: bb47b2717c7c4874786ddfa976e2d091, type: 3}
@@ -4257,6 +4261,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &359753968
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5254,6 +5259,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &429039935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5472,6 +5478,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &461800817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6390,6 +6397,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &547884899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7567,6 +7575,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &734336058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7927,6 +7936,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &786030609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9520,6 +9530,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &904740782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10312,6 +10323,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &954241613
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11078,6 +11090,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1027280407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12969,6 +12982,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1152199242
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13094,6 +13108,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1153544541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13422,6 +13437,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1196089925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13880,6 +13896,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1236960954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14102,6 +14119,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1280712646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14508,6 +14526,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1302527898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14633,6 +14652,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1315684482
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14966,6 +14986,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1343262765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15376,6 +15397,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1371847806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16197,6 +16219,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1423276182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16659,6 +16682,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1457371594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17397,6 +17421,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1500654894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17661,8 +17686,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9529511, y: 0.9521108, z: 0.19999999}
-  m_Center: {x: 0.03260011, y: -0.00059874746, z: 0}
+  m_Size: {x: 0.6457045, y: 0.6408861, z: 0.19999999}
+  m_Center: {x: 0.0010141178, y: 0.0059192413, z: 0}
 --- !u!212 &1539607589
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18600,6 +18625,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!4 &1667681919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: bb47b2717c7c4874786ddfa976e2d091, type: 3}
@@ -18740,6 +18766,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1684569963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20433,6 +20460,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: b5de42704b3e980449c5a828fcabb0a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1907679824}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: b5de42704b3e980449c5a828fcabb0a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1907679828}
   m_SourcePrefab: {fileID: 100100000, guid: b5de42704b3e980449c5a828fcabb0a1, type: 3}
 --- !u!4 &1907679822 stripped
 Transform:
@@ -20459,6 +20489,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 1f95e5f317ee74447910276d65f5f6aa, type: 3}
 --- !u!65 &1907679825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20480,6 +20511,102 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22935784, y: 0.43426758, z: 0.22679959}
   m_Center: {x: -0.0033369635, y: 0.21330443, z: 0.040498447}
+--- !u!82 &1907679828
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907679823}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1913205002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21475,6 +21602,7 @@ MonoBehaviour:
   delay: 0.2
   checkpointScript: {fileID: 472885968}
   playerPrefab: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1995466376
 BoxCollider:
   m_ObjectHideFlags: 0

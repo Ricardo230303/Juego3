@@ -15,6 +15,9 @@ public class Mayo : MonoBehaviour
     public string fireAnimationTrigger = "Firing"; // Trigger para la animación de disparo
     public string idleAnimationTrigger = "Idle"; // Trigger para la animación de idle
 
+    public AudioClip fireSound; // Clip de audio para el sonido del disparo
+    private AudioSource audioSource;
+
     private Animator animator;
     private float nextFireTime = 0f;
 
@@ -32,6 +35,11 @@ public class Mayo : MonoBehaviour
         if (animator != null && !string.IsNullOrEmpty(idleAnimationTrigger))
         {
             animator.SetTrigger(idleAnimationTrigger);
+        }
+
+        if (audioSource == null)
+        {
+            Debug.LogError("No se encontró un AudioSource en el GameObject.");
         }
     }
 
@@ -54,6 +62,11 @@ public class Mayo : MonoBehaviour
 
         // Esperar el tiempo de la animación de disparo
         yield return new WaitForSeconds(0.5f); // Ajustar según la duración de tu animación
+
+        if (audioSource != null && fireSound != null)
+        {
+            audioSource.PlayOneShot(fireSound); // Reproducir el sonido una vez
+        }
 
         // Disparar desde todos los firePoints
         FireMortar();

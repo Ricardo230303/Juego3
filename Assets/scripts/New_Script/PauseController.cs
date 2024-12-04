@@ -41,11 +41,14 @@ public class PauseController : MonoBehaviour
 
     public void UnpauseAndRestart()
     {
+        Health_Heart.ResetHealth();
         UnpauseAndLoad(SceneManager.GetActiveScene().name);
     }
 
     public void UnpauseAndLoad(string nextScene)
     {
+        Health_Heart.ResetHealth();
+
         currentPauseState = !currentPauseState;
         Time.timeScale = 1;
         SceneManager.LoadScene(nextScene);

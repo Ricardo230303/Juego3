@@ -31,8 +31,9 @@ public class Bullet : MonoBehaviour
                 mayo.TakeDamage(damage);
             }
         }
-
+        /*
         // Destruir la bala cuando colisione con cualquier objeto
         Destroy(gameObject);
+        */
     }
 }

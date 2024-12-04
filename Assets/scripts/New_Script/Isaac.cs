@@ -22,10 +22,18 @@ public class Isaac : MonoBehaviour
 
     private Animator animator;
 
+    public AudioClip shootSound;  // Sonido de disparo
+    private AudioSource audioSource;  // Componente AudioSource
+
     void Start()
     {
         // Obtenemos la referencia al Animator
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("No se encontró un AudioSource en el GameObject.");
+        }
     }
     void Update()
     {
@@ -97,6 +105,12 @@ public class Isaac : MonoBehaviour
         {
             rb.velocity = direction * bulletSpeed;
         }
+
+        if (audioSource != null && shootSound != null)
+        {
+            audioSource.PlayOneShot(shootSound);  // Reproducir el sonido de disparo
+        }
+
         animator.SetTrigger("Shoot");
     }
 }

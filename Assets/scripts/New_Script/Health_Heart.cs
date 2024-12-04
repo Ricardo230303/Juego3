@@ -11,6 +11,11 @@ public class Health_Heart : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     // Update is called once per frame
+
+    public static void ResetHealth()
+    {
+        health = 3;  // Establece la salud inicial al reiniciar
+    }
     void Update()
     {
         foreach (Image img in hearts)

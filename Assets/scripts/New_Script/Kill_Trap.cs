@@ -9,11 +9,28 @@ public class Kill_Trap : MonoBehaviour
     [SerializeField] Checkpoint checkpointScript;  // Referencia al script de Checkpoint
     [SerializeField] GameObject playerPrefab;  // Prefab del jugador para respawnear, si es necesario
 
+    [SerializeField] AudioClip deathSound;  // Sonido de la trampa al colisionar
+    private AudioSource audioSource;  //
+
+    private void Start()
+    {
+        // Obtener el componente AudioSource en el mismo GameObject
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("No se encontró un AudioSource en el GameObject de la trampa.");
+        }
+    }
+
     private void OnTriggerEnter(Collider other)  // Usamos Collider en lugar de Collider2D
     {
         // Verificamos si el objeto que entra en la zona de muerte es el jugador
         if (other.CompareTag("Player"))
         {
+            if (audioSource != null && deathSound != null)
+            {
+                audioSource.PlayOneShot(deathSound);  // Reproducir el sonido de la muerte
+            }
             // Desactivamos al jugador temporalmente para que no se vea durante el respawn
             other.gameObject.SetActive(false);
 

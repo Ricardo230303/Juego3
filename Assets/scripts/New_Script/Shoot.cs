@@ -11,6 +11,9 @@ public class Shooting : MonoBehaviour
 
     private Animator animator;
 
+    public AudioClip shootSound;  // Sonido de disparo
+    private AudioSource audioSource;  // Componente AudioSource
+
 
     // [SerializeField] float aimingOffsetZ = 1f;
 
@@ -18,6 +21,11 @@ public class Shooting : MonoBehaviour
     {
         // Obtenemos la referencia al Animator
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("No se encontró un AudioSource en el GameObject.");
+        }
     }
 
     void Update()
@@ -50,6 +58,10 @@ public class Shooting : MonoBehaviour
 
     void Shoot(Vector3 direction)
     {
+        if (audioSource != null && shootSound != null)
+        {
+            audioSource.PlayOneShot(shootSound);  // Reproducir el sonido de disparo
+        }
         // Crear un nuevo proyectil en la posición y rotación del firePoint
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 

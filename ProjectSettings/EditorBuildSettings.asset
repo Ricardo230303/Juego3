@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Centro_Inicio.unity
     guid: 304b148b41401444d93a7908896bf575
   - enabled: 1
+    path: Assets/Scenes/Centro_Pan.unity
+    guid: e661ad2f0c1f6e640992e390334e57d0
+  - enabled: 1
     path: Assets/Scenes/Centro_Tomate.unity
     guid: 510f4e9de867a2a48a66329a6807a2ee
   - enabled: 1
