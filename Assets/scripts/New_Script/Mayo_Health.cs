@@ -11,11 +11,15 @@ public class Mayo_Health : MonoBehaviour
 
     private bool isDead = false;
 
+    private Animator animator;
+
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         healthBar.SetHealth(currentHealth);
+
+        animator = GetComponent<Animator>();
     }
 
     private void Update()

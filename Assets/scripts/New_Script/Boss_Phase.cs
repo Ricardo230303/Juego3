@@ -78,6 +78,7 @@ public class Boss_Phase : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        float lastHealth = currentHealth;
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
@@ -105,19 +106,25 @@ public class Boss_Phase : MonoBehaviour
                     }
                 }
             }
+        }
 
-            if (currentHealth <= 0)
+        if (lastHealth > 0 && currentHealth <= 0)
+        {
+            Die();
+            if (animator != null)
             {
-                Die();
+                animator.SetTrigger("Die");  // Activar la animación de muerte
+                Debug.Log("animm_____");
             }
         }
     }
     private void Die()
         {
-            isDead = true;
+
+        isDead = true;
             Debug.Log("Boss is dead");
-            Destroy(gameObject);
-        }
+
+    }
     
     private void OnCollisionEnter(Collision collision)
     {

@@ -13,7 +13,14 @@ public class Erratic : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
         InvokeRepeating("SetRandomDestination", 0f, roamInterval);
+    }
+
+    void Update()
+    {
+        // Mantener la rotación del objeto igual a la rotación original (solo sobre el eje Y)
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
     void SetRandomDestination()

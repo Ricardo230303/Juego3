@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2e37bee16cd83479af9dd6bf6570e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 200
   bulletPrefab: {fileID: 2150622189570827268, guid: 8c9342fd71b98cf449b157e168303cf6, type: 3}
   bulletSpawnPoints:
   - {fileID: 123296791}
@@ -943,7 +943,7 @@ Transform:
   m_GameObject: {fileID: 247327281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.8, y: -4.9288917, z: -3.9614995}
+  m_LocalPosition: {x: -7.8, y: -4.9288917, z: -6.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1110,7 +1110,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.796491, y: 3.3029702, z: -6.33}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3362, y: 1.3362, z: 1.3362}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 871829842}
@@ -1314,7 +1314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &486229962
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -6649,8 +6649,8 @@ Transform:
   m_GameObject: {fileID: 871829841}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32, y: 13.36, z: -3.25}
-  m_LocalScale: {x: 3.3543994, y: 3.3543994, z: 3.3543994}
+  m_LocalPosition: {x: 0.39615, y: 8.91, z: 0.04}
+  m_LocalScale: {x: 1.0184551, y: 1.0184551, z: 1.0184551}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 386209919}
@@ -6674,8 +6674,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9529511, y: 0.9521108, z: 0.19999999}
-  m_Center: {x: 0.03260011, y: -0.00059874746, z: 0}
+  m_Size: {x: 0.9529511, y: 0.9521108, z: 1.306932}
+  m_Center: {x: 0.032600116, y: -0.0005987356, z: 0.553466}
 --- !u!212 &871829844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8140,7 +8140,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 4083784087426700543, guid: b842d9a4f00c68a4793025210949e4c5, type: 3}
   firePoint: {fileID: 643168397}
   projectileSpeed: 30
-  fireRate: 0.5
+  fireRate: 0.1
   bulletLife: 1.5
   sr: {fileID: 1440183157}
   shootSound: {fileID: 8300000, guid: ff4301d8670c8b54088b91e4798137f9, type: 3}

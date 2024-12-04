@@ -15,7 +15,7 @@ public class Isaac : MonoBehaviour
     private Vector3 movement;
 
     // Variables para disparo continuo
-    private float shootDelay = 0.5f; // Delay entre disparos (disparo continuo cada 0.1 segundos)
+    private float shootDelay = 0.2f; // Delay entre disparos (disparo continuo cada 0.1 segundos)
     private float lastShootTime = 0f;
 
     public SpriteRenderer sr;
