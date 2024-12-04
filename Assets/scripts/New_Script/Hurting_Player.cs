@@ -10,7 +10,7 @@ public class Hurting_Player : MonoBehaviour
         if (other.CompareTag("Enemy_Bullet"))
         {
             Health_Heart.health--;
-            if(Health_Heart.health <= 0 )
+            if (Health_Heart.health <= 0)
             {
                 gameOverScript.ShowGameOverMenu();
             }

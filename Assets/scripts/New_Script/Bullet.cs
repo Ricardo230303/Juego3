@@ -23,6 +23,13 @@ public class Bullet : MonoBehaviour
             {
                 enemy.TakeDamage(damage);  // Aplicar el daño al enemigo
             }
+
+            Mayo_Health mayo = other.GetComponent<Mayo_Health>();
+
+            if (mayo != null)
+            {
+                mayo.TakeDamage(damage);
+            }
         }
 
         // Destruir la bala cuando colisione con cualquier objeto
