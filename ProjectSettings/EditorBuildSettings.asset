@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Centro_Tomate.unity
     guid: 510f4e9de867a2a48a66329a6807a2ee
   - enabled: 1
+    path: Assets/Scenes/Centro_Mayo.unity
+    guid: f1712f72cf21cb94b83d9ff0dafa5fc3
+  - enabled: 1
     path: Assets/Scenes/Platform.unity
     guid: a42ac6d3f496bdc46b014b6158b91a72
   - enabled: 1
@@ -29,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mayo.unity
     guid: 62277fa6e2390cd469f1dfcbbc3e0889
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: bb6d40cf930d54b41b32d0794ef556c4
   m_configObjects: {}

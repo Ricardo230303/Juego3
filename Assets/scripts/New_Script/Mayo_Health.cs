@@ -13,6 +13,8 @@ public class Mayo_Health : MonoBehaviour
 
     private Animator animator;
 
+    public GameObject objectToDeactivate; 
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -43,9 +45,25 @@ public class Mayo_Health : MonoBehaviour
 
     private void Die()
     {
+        if (isDead) return;
+
         isDead = true;
         Debug.Log("Boss is dead");
-        Destroy(gameObject);
+
+        // Activar la animación de muerte
+        if (animator != null)
+        {
+            animator.SetTrigger("Die"); // Asegúrate de tener un trigger "Die" en el Animator
+        }
+
+        if (objectToDeactivate != null)
+        {
+            objectToDeactivate.SetActive(false);
+        }
+
+        // Aquí no desactivamos el objeto, solo ejecutamos la animación
+        // Si deseas que el objeto quede inmóvil, puedes hacerlo aquí (opcional)
+        // Ejemplo: agent.isStopped = true; si usas NavMeshAgent
     }
 
     private void OnCollisionEnter(Collision collision)

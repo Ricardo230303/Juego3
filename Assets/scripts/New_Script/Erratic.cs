@@ -17,7 +17,7 @@ public class Erratic : MonoBehaviour
         InvokeRepeating("SetRandomDestination", 0f, roamInterval);
     }
 
-    void Update()
+        void Update()
     {
         // Mantener la rotación del objeto igual a la rotación original (solo sobre el eje Y)
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);

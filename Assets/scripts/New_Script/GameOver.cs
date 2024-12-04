@@ -15,6 +15,7 @@ public class GameOver : MonoBehaviour
   
     public void RestartGame()
     {
+        Health_Heart.ResetHealth();
         Time.timeScale = 1; // Reanuda el tiempo antes de cargar la escena para asegurarse de que el juego se reinicie correctamente
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
      /*
