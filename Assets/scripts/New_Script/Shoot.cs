@@ -22,27 +22,33 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        // Disparo cuando se presiona el botón de disparo y ha pasado el tiempo de espera
-        if (Input.GetKey(KeyCode.LeftControl) && Time.time > nextFireTime)
+        // Verifica si se mantiene presionada alguna de las teclas de dirección para disparar
+        if (Time.time > nextFireTime)
         {
-            Shoot();
-            nextFireTime = Time.time + fireRate;
+            if (Input.GetKey(KeyCode.UpArrow))  // Flecha arriba
+            {
+                animator.SetTrigger("Shoot_Up");
+                Shoot(Vector3.up);
+                nextFireTime = Time.time + fireRate;
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))  // Flecha izquierda
+            {
+                animator.SetTrigger("Shoot");
+                Shoot(Vector3.left);
+                nextFireTime = Time.time + fireRate;
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))  // Flecha derecha
+            {
+                animator.SetTrigger("Shoot");
+                Shoot(Vector3.right);
+                nextFireTime = Time.time + fireRate;
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            animator.SetTrigger("Shoot_Up");
-        }
-
-        // Verifica si se presiona la tecla para disparar
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            animator.SetTrigger("Shoot");
-        }
         UpdateFirePointRotation();
     }
 
-    void Shoot()
+    void Shoot(Vector3 direction)
     {
         // Crear un nuevo proyectil en la posición y rotación del firePoint
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
@@ -50,45 +56,30 @@ public class Shooting : MonoBehaviour
         // Obtener el componente Rigidbody del proyectil y aplicar la fuerza
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
 
-        // Dirección del disparo basada en la orientación del firePoint
-        Vector3 shootDirection = firePoint.forward;
-
         // Asegurarse de que el proyectil se dispare en la dirección correcta
-        rb.velocity = shootDirection.normalized * projectileSpeed;
+        rb.velocity = direction.normalized * projectileSpeed;
 
         // Destruir el proyectil después de un tiempo
         Destroy(projectile, bulletLife);
     }
 
-
-
     // Actualiza la rotación del firePoint según la dirección del jugador
     void UpdateFirePointRotation()
     {
-        // Si el jugador se mueve a la izquierda o derecha, invertir el firePoint
         if (sr != null)
         {
-            if (sr.flipX)  // Si el sprite está invertido (mirando a la izquierda)
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
-                firePoint.rotation = Quaternion.Euler(0, -90, 0); // Rotar el firePoint 180 grados
+                firePoint.rotation = Quaternion.Euler(0, -90, 0); // Rotar hacia la izquierda
             }
-            else  // Si el sprite está mirando a la derecha
+            else if (Input.GetKey(KeyCode.RightArrow))
             {
-                firePoint.rotation = Quaternion.Euler(0, 90, 0); // Mantener la rotación original
+                firePoint.rotation = Quaternion.Euler(0, 90, 0); // Rotar hacia la derecha
             }
-        }
-
-        if (Input.GetKey("l"))
-        {
-            firePoint.rotation = Quaternion.Euler(-45, 90, 0);  // Rotar 45 grados sobre el eje X
-        }
-        else if  (Input.GetKey("i"))
-        {
-            firePoint.rotation = Quaternion.Euler(-90, 90, 0);  // Rotar 90 grados sobre el eje X
-        }
-        else if (Input.GetKey("j"))
-        {
-            firePoint.rotation = Quaternion.Euler(-135, 90, 0);
+            else if (Input.GetKey(KeyCode.UpArrow))
+            {
+                firePoint.rotation = Quaternion.Euler(0, 0, 0);  // Mantener la rotación hacia arriba
+            }
         }
     }
 }
