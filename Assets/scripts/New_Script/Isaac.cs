@@ -18,6 +18,15 @@ public class Isaac : MonoBehaviour
     private float shootDelay = 0.5f; // Delay entre disparos (disparo continuo cada 0.1 segundos)
     private float lastShootTime = 0f;
 
+    public SpriteRenderer sr;
+
+    private Animator animator;
+
+    void Start()
+    {
+        // Obtenemos la referencia al Animator
+        animator = GetComponent<Animator>();
+    }
     void Update()
     {
         // Obtener entrada para el movimiento del jugador (A, D para X y W, S para Z)
@@ -50,6 +59,16 @@ public class Isaac : MonoBehaviour
         {
             TryFire(Vector3.right); // Disparar hacia la derecha (eje X positivo)
         }
+        // Flip el sprite cuando el jugador se mueve a la izquierda
+        if (movement.x < 0)
+        {
+            sr.flipX = true;  // Voltear el sprite hacia la izquierda
+        }
+        else if (movement.x > 0)
+        {
+            sr.flipX = false; // Voltear el sprite hacia la derecha
+        }
+
     }
 
     // Método para intentar disparar de forma continua
@@ -78,5 +97,6 @@ public class Isaac : MonoBehaviour
         {
             rb.velocity = direction * bulletSpeed;
         }
+        animator.SetTrigger("Shoot");
     }
 }

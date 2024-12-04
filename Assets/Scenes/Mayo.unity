@@ -1521,7 +1521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2902468787624323206, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.27
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 2902468787624323206, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1581,6 +1581,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 591527674069076486, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 331449940}
+    - targetCorrespondingSourceObject: {fileID: 591527674069076486, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 331449943}
   m_SourcePrefab: {fileID: 100100000, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
 --- !u!1 &331449928 stripped
 GameObject:
@@ -1615,7 +1618,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331449928}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
   m_Speed: 3.5
@@ -1700,6 +1703,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   healthBar: {fileID: 2033009227}
+--- !u!114 &331449943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331449928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b86a6ba175f954f996889fd56be0b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roamRadius: 5
+  roamInterval: 2
 --- !u!1 &351265628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584825390360939293, guid: 860a1af5c46fc984087ca9446c4bb8d7, type: 3}
@@ -1720,6 +1737,7 @@ MonoBehaviour:
   moveSpeed: 5
   bulletPrefab: {fileID: 4083784087426700543, guid: b842d9a4f00c68a4793025210949e4c5, type: 3}
   bulletSpeed: 30
+  sr: {fileID: 351265644}
 --- !u!114 &351265637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,6 +1769,11 @@ MonoBehaviour:
   - {fileID: 366000644}
   fullHeart: {fileID: 21300000, guid: ed4010c3f8a694943b3e5d53fa1fdae9, type: 3}
   emptyHeart: {fileID: 21300000, guid: 3451b47317a54984d84f908aaa7f3190, type: 3}
+--- !u!212 &351265644 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7365007574777536415, guid: 860a1af5c46fc984087ca9446c4bb8d7, type: 3}
+  m_PrefabInstance: {fileID: 8917642987288800829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &359011841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3240,7 +3263,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944598315}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -3252,7 +3275,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_GenerateLinks: 0
   m_IgnoreNavMeshAgent: 1
@@ -3262,7 +3285,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: b527c90a13176e44489c8a6fe193549d, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8583368ae47e3994e8a039e215d446f6, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &960816917
 GameObject:
@@ -4880,7 +4903,7 @@ Transform:
   m_GameObject: {fileID: 1747246297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.2506447, y: -1.477227, z: -32.30279}
+  m_LocalPosition: {x: -6.2506447, y: -3.3, z: -32.30279}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
