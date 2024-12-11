@@ -778,7 +778,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.774, y: -0.185, z: -0.274}
-  m_LocalScale: {x: 0.36851925, y: 0.055095, z: -0.04516679}
+  m_LocalScale: {x: 0.36851925, y: 0.055095, z: -0.124140926}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1274765407}
@@ -1127,6 +1127,7 @@ GameObject:
   - component: {fileID: 585357473}
   - component: {fileID: 585357472}
   - component: {fileID: 585357471}
+  - component: {fileID: 585357474}
   m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Enemy
@@ -1220,6 +1221,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585357469}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &585357474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585357469}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+  m_Center: {x: 0.00000011920929, y: 0, z: 0}
 --- !u!1 &753678250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1534,7 @@ Transform:
   m_GameObject: {fileID: 840333591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.364, y: -0.185, z: -0.274}
+  m_LocalPosition: {x: -0.364, y: -0.185, z: -1.297}
   m_LocalScale: {x: 0.36851925, y: 0.055095, z: -0.04516679}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3014,7 +3036,7 @@ Transform:
   m_GameObject: {fileID: 1535990034}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.213, y: -0.171, z: -0.386}
+  m_LocalPosition: {x: 0.213, y: -0.171, z: -0.327}
   m_LocalScale: {x: 0.36851925, y: 0.27914983, z: -0.12951578}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3035,7 +3057,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3231,9 +3253,6 @@ PrefabInstance:
       addedObject: {fileID: 1555453671}
     - targetCorrespondingSourceObject: {fileID: 6371595519945861344, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1555453670}
-    - targetCorrespondingSourceObject: {fileID: 6371595519945861344, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1555453669}
     - targetCorrespondingSourceObject: {fileID: 6371595519945861344, guid: c9a29b658da95b741b14570e2d916b33, type: 3}
       insertIndex: -1
@@ -3379,35 +3398,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1398580933}
+  - {fileID: 1343094981}
+  - {fileID: 1770570962}
   fullHeart: {fileID: 21300000, guid: ed4010c3f8a694943b3e5d53fa1fdae9, type: 3}
   emptyHeart: {fileID: 21300000, guid: 3451b47317a54984d84f908aaa7f3190, type: 3}
---- !u!114 &1555453670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555453664}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403f05dfda762c94c84e97d010728546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  currentHealth: 3
-  onEnemyDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  hearthContainer: {fileID: 0}
-  singleHearth: {fileID: 0}
-  gameOverScript: {fileID: 0}
-  currentHealthVisual:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &1555453671
 MonoBehaviour:
   m_ObjectHideFlags: 0

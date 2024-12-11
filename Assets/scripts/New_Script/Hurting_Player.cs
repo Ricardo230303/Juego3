@@ -5,25 +5,34 @@ using UnityEngine;
 public class Hurting_Player : MonoBehaviour
 {
     [SerializeField] GameOver gameOverScript;
+
+    private bool isInvulnerable = false;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy_Bullet"))
+        if (other.CompareTag("Enemy_Bullet") || other.CompareTag("Enemy"))
         {
-            Health_Heart.health--;
-            if (Health_Heart.health <= 0)
+            if (!isInvulnerable) // Verificar si ya está invulnerable
             {
-                gameOverScript.ShowGameOverMenu();
-            }
-            else
-            {
-                StartCoroutine(GetHurt());
+                Health_Heart.health--; // Reducir la vida
+                if (Health_Heart.health <= 0)
+                {
+                    gameOverScript.ShowGameOverMenu(); // Mostrar pantalla de Game Over si la vida llega a 0
+                }
+                else
+                {
+                    StartCoroutine(GetHurt()); // Iniciar la corutina de invulnerabilidad
+                }
+
+                Debug.Log("Daño recibido");
             }
         }
     }
     IEnumerator GetHurt()
     {
+        isInvulnerable = true;
         Physics.IgnoreLayerCollision(7, 8);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         Physics.IgnoreLayerCollision(7, 8, false);
+        isInvulnerable = false;
     }
 }
