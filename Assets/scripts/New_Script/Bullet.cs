@@ -32,6 +32,14 @@ public class Bullet : MonoBehaviour
             }
 
             Palta palta = other.GetComponent<Palta>();
+            Debug.Log(other.name);
+            if (palta == null) {
+            
+                if(other.transform.parent != null) {
+                    palta = other.transform.parent.GetComponent<Palta>();
+                    Debug.Log(other.name);
+                }
+            }
 
             if (palta != null)
             {

@@ -16,7 +16,6 @@ public class Palta : MonoBehaviour
 
     public MonoBehaviour scriptToDeactivate;
 
-    public List<Palta> childElements;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -25,10 +24,6 @@ public class Palta : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        if (childElements == null || childElements.Count == 0)
-        {
-            childElements = new List<Palta>(GetComponentsInChildren<Palta>());
-        }
     }
 
     private void Update()
@@ -39,13 +34,6 @@ public class Palta : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-
-        float damagePerChild = damage / (childElements.Count + 1);
-
-        foreach (Palta child in childElements)
-        {
-            child.TakeDamage(damagePerChild);
-        }
 
         healthBar.SetHealth(currentHealth);
 
@@ -73,11 +61,6 @@ public class Palta : MonoBehaviour
         if (scriptToDeactivate != null)
         {
             scriptToDeactivate.enabled = false;
-        }
-
-        foreach (Palta child in childElements)
-        {
-            child.Die();  // Llamar a la muerte de los hijos
         }
 
         // Aquí no desactivamos el objeto, solo ejecutamos la animación
