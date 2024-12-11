@@ -331,3 +331,211 @@ Received Import Request.
 Start importing Assets/recursos/Personajes/Palta/sprites/palta4.png using Guid(07445bff96d3ed346a949d1d80836f6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b242482106ccb7b7cd3a23785e60dc') in 0.038112 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 221.006675 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/1/idle2.png
+  artifactKey: Guid(15e782fec1c658843a3ee83268d96dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/1/idle2.png using Guid(15e782fec1c658843a3ee83268d96dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf52504a78a30620bb15b2106c9bfe5b') in 0.040025 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/1/JumpAnimation2.png
+  artifactKey: Guid(76b4a463b06d7d5499531fba20eb189e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/1/JumpAnimation2.png using Guid(76b4a463b06d7d5499531fba20eb189e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28acec484947372ff6ea16fbcc621d42') in 0.034009 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/1/JumpAnimation3.png
+  artifactKey: Guid(ee932d2ad36f48f48af4da702b541ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/1/JumpAnimation3.png using Guid(ee932d2ad36f48f48af4da702b541ab8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '797fd2ecb457558df4a90fa866b09b87') in 0.037542 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/1/walk2.png
+  artifactKey: Guid(77cad15944af534478a70ef23a68fc37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/1/walk2.png using Guid(77cad15944af534478a70ef23a68fc37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7394d818512116ca971e8184acec41b8') in 0.029457 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.915636 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/2/PanIdle2.png
+  artifactKey: Guid(f65fbea8a3440f744be152f4a10fcfe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/2/PanIdle2.png using Guid(f65fbea8a3440f744be152f4a10fcfe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc876525f3fc5aee83f5e83771f73adc') in 0.040539 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/2/PanJump2.png
+  artifactKey: Guid(2d00778759fe0104389a6367f695c5b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/2/PanJump2.png using Guid(2d00778759fe0104389a6367f695c5b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd02b68a01422afaa3e109436dbffa251') in 0.038002 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/2/PanWalk2.png
+  artifactKey: Guid(b20394c0b9726ba4abaf3dfe8f9dd517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/2/PanWalk2.png using Guid(b20394c0b9726ba4abaf3dfe8f9dd517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b52688cf82ae53568a77fe920ba634') in 0.024006 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/2/PanWalk1.png
+  artifactKey: Guid(2f2de57f20364604d926e45ee8f3bac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/2/PanWalk1.png using Guid(2f2de57f20364604d926e45ee8f3bac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca0b1b3213b599dc2ff5cd9addb7741') in 0.030007 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.643843 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/3/TomateIdle2.png
+  artifactKey: Guid(5d216adf2c468004194b35932af84f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/3/TomateIdle2.png using Guid(5d216adf2c468004194b35932af84f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d95b575a8748ca3951e920fd892b5ce') in 0.042250 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/3/TomateWalk1.png
+  artifactKey: Guid(d7897626a8ef35f4987ecef2e488608b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/3/TomateWalk1.png using Guid(d7897626a8ef35f4987ecef2e488608b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb99a2909b05a1cfe0a5a4272642c628') in 0.040486 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/3/TomateWalk2.png
+  artifactKey: Guid(37579e73212055440ab08d9ae59cde4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/3/TomateWalk2.png using Guid(37579e73212055440ab08d9ae59cde4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbd0e95fd454cc9b83b273e058500733') in 0.024451 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.469113 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/4/AnimDisparoPalta2.png
+  artifactKey: Guid(762af55766416024bae06832ad5bbf34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/4/AnimDisparoPalta2.png using Guid(762af55766416024bae06832ad5bbf34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae1d04d7baeecd96c2deca9b8aac06ed') in 0.027321 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/4/PaltaJump2.png
+  artifactKey: Guid(2bfad5767b7aaf4429a7fa3423defbc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/4/PaltaJump2.png using Guid(2bfad5767b7aaf4429a7fa3423defbc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a210e79f280a9d87eb6ab8a3e24b4b8') in 0.033661 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/4/PaltaIdle2.png
+  artifactKey: Guid(004e104594a5b2a48a4aade49cf6144c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/4/PaltaIdle2.png using Guid(004e104594a5b2a48a4aade49cf6144c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19309a2ab345dd3948e1312a7196dea1') in 0.027201 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/4/PaltaWalk2.png
+  artifactKey: Guid(c16db86826c0e4249826d470bb384ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/4/PaltaWalk2.png using Guid(c16db86826c0e4249826d470bb384ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b7973b471f9933ba4e5cf172ce774bc') in 0.032769 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/4/PaltaWalk1.png
+  artifactKey: Guid(5faf0c0832a7ebb4ca423d7f01f8628a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/4/PaltaWalk1.png using Guid(5faf0c0832a7ebb4ca423d7f01f8628a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b9a5bd28a9ec60cdc224668a071f073') in 0.022368 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 2.026213 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/5/MayoIdle2.png
+  artifactKey: Guid(0a99c0832b36c024b87156f4a4332f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/5/MayoIdle2.png using Guid(0a99c0832b36c024b87156f4a4332f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6860fbe4e6bdf80202a361724c9baf3b') in 0.039800 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/5/MayoWalk1.png
+  artifactKey: Guid(1476f0342652da64783dec876acd2988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/5/MayoWalk1.png using Guid(1476f0342652da64783dec876acd2988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b3ecb47007d3b7c5f7c7fe74b62232c') in 0.033456 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/recursos/Personajes/Player/sprites/5/MayoJump3.png
+  artifactKey: Guid(2a22cfe5f6f6f1349bd5ea4974bfecae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/Player/sprites/5/MayoJump3.png using Guid(2a22cfe5f6f6f1349bd5ea4974bfecae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfaa11318a2b543fab6bfdfc4a0f77bb') in 0.028578 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.860781 seconds.
+  path: Assets/recursos/Personajes/TomateBoss/Sprites/Helices.png
+  artifactKey: Guid(8be21932c4d2a1340aaa62105529e94d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/TomateBoss/Sprites/Helices.png using Guid(8be21932c4d2a1340aaa62105529e94d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ef0165080830f66e279511884964070') in 0.046257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/recursos/Personajes/TomateBoss/Sprites/Nave.png
+  artifactKey: Guid(934b0fbf6bd784c4d9750a590190cc41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/TomateBoss/Sprites/Nave.png using Guid(934b0fbf6bd784c4d9750a590190cc41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4056631f4441fac20e24cf6dae074df8') in 0.033923 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 4.382606 seconds.
+  path: Assets/recursos/Personajes/TomateBoss/Sprites/Tomate/TomateIdle2.png
+  artifactKey: Guid(175c72b118b01df44a6e3c5de86cc334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/TomateBoss/Sprites/Tomate/TomateIdle2.png using Guid(175c72b118b01df44a6e3c5de86cc334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff1a81e17b007dc78978d33dff40eef3') in 0.045024 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/recursos/Personajes/TomateBoss/Sprites/Tomate/TomateIdle3.png
+  artifactKey: Guid(52ce5af0a4e59284b9be05c34bd16195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/TomateBoss/Sprites/Tomate/TomateIdle3.png using Guid(52ce5af0a4e59284b9be05c34bd16195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd1794a78e9b10bf57d014b890f6d050') in 0.038325 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.859934 seconds.
+  path: Assets/recursos/Personajes/TomateBoss/Sprites/Torreta/TomateIdle2.png
+  artifactKey: Guid(919670126f515144984dc81408a84bcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/TomateBoss/Sprites/Torreta/TomateIdle2.png using Guid(919670126f515144984dc81408a84bcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71f4bfa2e5fefe28101827063408180a') in 0.043257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/recursos/Personajes/TomateBoss/Sprites/Torreta/TomateIdle6.png
+  artifactKey: Guid(0bea52ae3aa85b94f9921972221ddc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/TomateBoss/Sprites/Torreta/TomateIdle6.png using Guid(0bea52ae3aa85b94f9921972221ddc73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab52b08824ad19cb77dd892e61658854') in 0.031171 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/recursos/Personajes/TomateBoss/Sprites/Torreta/TomateIdle4.png
+  artifactKey: Guid(774b42f0ce949f34dbe601f90fdb47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/recursos/Personajes/TomateBoss/Sprites/Torreta/TomateIdle4.png using Guid(774b42f0ce949f34dbe601f90fdb47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f1a994b145eb8b6a0e52d97b681b325') in 0.025017 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
