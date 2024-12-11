@@ -30,10 +30,19 @@ public class Bullet : MonoBehaviour
             {
                 mayo.TakeDamage(damage);
             }
+
+            Palta palta = other.GetComponent<Palta>();
+
+            if (palta != null)
+            {
+                palta.TakeDamage(damage);
+            }
+            Destroy(gameObject);
         }
-        /*
-        // Destruir la bala cuando colisione con cualquier objeto
-        Destroy(gameObject);
-        */
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            // Destruir la bala cuando colisiona con el layer Ground
+            Destroy(gameObject);
+        }
     }
 }

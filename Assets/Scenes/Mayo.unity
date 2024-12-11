@@ -1521,11 +1521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2902468787624323206, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6
+      value: 2.49
       objectReference: {fileID: 0}
     - target: {fileID: 2902468787624323206, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -48.727
+      value: -47.46
       objectReference: {fileID: 0}
     - target: {fileID: 2902468787624323206, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1558,6 +1558,14 @@ PrefabInstance:
     - target: {fileID: 2902468787624323206, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506409077982831073, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506409077982831073, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1710,7 +1718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   healthBar: {fileID: 2033009227}
-  objectToDeactivate: {fileID: 1290234363}
+  scriptToDeactivate: {fileID: 331449939}
 --- !u!114 &331449943
 MonoBehaviour:
   m_ObjectHideFlags: 0
