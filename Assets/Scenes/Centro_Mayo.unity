@@ -7044,7 +7044,7 @@ MonoBehaviour:
   lines:
   - Felicidades, demostraste que puedes volverte un completo
   - "Ya no tienes nada que hacer aqu\xED."
-  - Dirigete al muelle.
+  - "Dir\xEDgete al muelle."
   - "Ya no est\xE1s incompleto "
   textSpeed: 0.05
   objectToActivate: {fileID: 566334411}

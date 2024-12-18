@@ -12,6 +12,11 @@ public class Health_Heart : MonoBehaviour
     public Sprite emptyHeart;
     // Update is called once per frame
 
+    private void Start()
+    {
+        Health_Heart.ResetHealth();
+    }
+
     public static void ResetHealth()
     {
         health = 3;  // Establece la salud inicial al reiniciar

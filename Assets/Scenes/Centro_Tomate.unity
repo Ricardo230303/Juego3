@@ -7207,7 +7207,7 @@ MonoBehaviour:
   promptImage: {fileID: 1754975340}
   dialogueImage: {fileID: 1409141206}
   lines:
-  - Veo que te sabes valer por ti mismo.
+  - "Veo que te sabes valer por t\xED mismo."
   - "No sabes lo mucho que nos cost\xF3 encargarnos de ese tomate."
   - "Puede que seas m\xE1s digno de lo que pienso."
   - Ve por el camino a la izquierda para completar tu objetivo.

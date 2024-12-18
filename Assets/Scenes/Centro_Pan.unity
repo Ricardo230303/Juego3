@@ -7629,9 +7629,9 @@ MonoBehaviour:
   dialogueImage: {fileID: 1409141206}
   lines:
   - Creo que es momento de darte una prueba real...
-  - "A unos kil\xF3metros de aqu\xED esta tu proximo reto..."
-  - Un tomate se ha vuelto loco y se ha hecho con un avion, necesito que lo derrotes
-    y me traigas su recompensa...
+  - "A unos kil\xF3metros de aqu\xED esta tu pr\xF3ximo reto..."
+  - "Un tomate se ha vuelto loco y se ha hecho con un avi\xF3n, necesito que lo derrotes
+    y me traigas su recompensa..."
   - "Ve a la casa de aqu\xED al lado..."
   - Ahh se me olvidaba darte tu recompensa.
   textSpeed: 0.05

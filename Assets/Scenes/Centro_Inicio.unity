@@ -7044,9 +7044,9 @@ MonoBehaviour:
   - "Otra vienesa m\xE1s..."
   - Completa esta prueba para ver si por lo menos sabes existir.
   - "Cada reto te dar\xE1 una moneda..."
-  - Entregamelas todas y te convertire en un completo.
+  - "Entr\xE9gamelas todas y te convertir\xE9 en un completo."
   - Aunque no creo que seas digno...
-  - Dirigete al muelle para comenzar.
+  - "Dir\xEDgete al muelle para comenzar."
   textSpeed: 0.05
   objectToActivate: {fileID: 315314036}
   playerMovement: {fileID: 720095881}
