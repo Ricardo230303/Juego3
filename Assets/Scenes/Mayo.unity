@@ -1564,6 +1564,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4506409077982831073, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
+      propertyPath: m_CullingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4506409077982831073, guid: 769bfdb3dc4425a47967d9272cc0e4da, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
@@ -1716,9 +1720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d3d16bcbad8ad44a01290406b65f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 300
   healthBar: {fileID: 2033009227}
   scriptToDeactivate: {fileID: 331449939}
+  objectToActivate: {fileID: 1555541847}
 --- !u!114 &331449943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4818,7 +4823,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555541847}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4dcf2ea402cb0874db662c5ae41bb7b7, type: 2}
   m_CullingMode: 0

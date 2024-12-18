@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Centro_Mayo.unity
     guid: f1712f72cf21cb94b83d9ff0dafa5fc3
   - enabled: 1
+    path: Assets/Scenes/Centro_Palta.unity
+    guid: 48b36da261628cf4c9d4313f2bda2de7
+  - enabled: 1
     path: Assets/Scenes/Tomate.unity
     guid: 3aef48b8de6987a4da45ef176d5f7c86
   - enabled: 1

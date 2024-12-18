@@ -15,6 +15,8 @@ public class Mayo_Health : MonoBehaviour
 
     public MonoBehaviour scriptToDeactivate;
 
+    public GameObject objectToActivate;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -50,9 +52,10 @@ public class Mayo_Health : MonoBehaviour
         isDead = true;
         Debug.Log("Boss is dead");
 
-        // Activar la animación de muerte
+        // Desactivar Apply Root Motion
         if (animator != null)
         {
+            animator.applyRootMotion = false;
             animator.SetTrigger("Die"); // Asegúrate de tener un trigger "Die" en el Animator
         }
 
@@ -61,9 +64,14 @@ public class Mayo_Health : MonoBehaviour
             scriptToDeactivate.enabled = false;
         }
 
-        // Aquí no desactivamos el objeto, solo ejecutamos la animación
-        // Si deseas que el objeto quede inmóvil, puedes hacerlo aquí (opcional)
-        // Ejemplo: agent.isStopped = true; si usas NavMeshAgent
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(true);
+            Debug.Log($"{objectToActivate.name} activado.");
+        }
+
+        // Aquí puedes añadir más lógica si es necesario, como desactivar el movimiento
+        // o asegurarte de que el enemigo queda inmóvil durante la animación de muerte.
     }
 
     private void OnCollisionEnter(Collision collision)

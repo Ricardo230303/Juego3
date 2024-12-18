@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7207,10 +7207,10 @@ MonoBehaviour:
   promptImage: {fileID: 1754975340}
   dialogueImage: {fileID: 1409141206}
   lines:
-  - "Bien hecho, muchos lo intentaron pero ninguno complet\xF3 la tarea."
-  - "Quiz\xE1s si seas el elegido"
-  - Tu siguiente prueba te espera en el bosque, al final del camino.
-  - Y gracias por la moneda.
+  - Veo que te sabes valer por ti mismo.
+  - "No sabes lo mucho que nos cost\xF3 encargarnos de ese tomate."
+  - "Puede que seas m\xE1s digno de lo que pienso."
+  - Ve por el camino a la izquierda para completar tu objetivo.
   textSpeed: 0.1
   objectToActivate: {fileID: 320049697}
   playerMovement: {fileID: 720095881}
@@ -15355,7 +15355,7 @@ Transform:
   m_GameObject: {fileID: 2061132612}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.33, y: -1.74, z: -6.36}
+  m_LocalPosition: {x: -19.5, y: -1.74, z: -6.36}
   m_LocalScale: {x: 1, y: 3.0798, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15373,7 +15373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502603b434895a64684d8f3a638db7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: Mayo
+  nextSceneName: Palta
 --- !u!65 &2061132615
 BoxCollider:
   m_ObjectHideFlags: 0

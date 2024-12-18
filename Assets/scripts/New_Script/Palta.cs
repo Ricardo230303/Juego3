@@ -16,6 +16,8 @@ public class Palta : MonoBehaviour
 
     public MonoBehaviour scriptToDeactivate;
 
+    public GameObject objectToActivate;
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -61,6 +63,12 @@ public class Palta : MonoBehaviour
         if (scriptToDeactivate != null)
         {
             scriptToDeactivate.enabled = false;
+        }
+
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(true);
+            Debug.Log($"{objectToActivate.name} activado.");
         }
 
         // Aquí no desactivamos el objeto, solo ejecutamos la animación
