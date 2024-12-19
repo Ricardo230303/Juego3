@@ -5,14 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    public string nextSceneName;
+    public string nextSceneName; // Nombre de la escena a cargar
+    public GameObject objectToActivate; // Objeto que se encenderá al colisionar
+    public float delayBeforeSceneChange = 1.5f; // Tiempo de espera antes de cambiar de escena
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
-            LoadNextScene();
+            StartCoroutine(ActivateObjectAndChangeScene());
         }
+    }
+
+    private IEnumerator ActivateObjectAndChangeScene()
+    {
+        // Activar el objeto si está asignado
+        if (objectToActivate != null)
+        {
+            objectToActivate.SetActive(true);
+        }
+
+        // Esperar el tiempo especificado
+        yield return new WaitForSeconds(delayBeforeSceneChange);
+
+        // Cargar la siguiente escena
+        LoadNextScene();
     }
 
     private void LoadNextScene()
